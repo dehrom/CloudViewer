@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		36E4B125A0C5D9292D67BE59 /* Pods_CloudViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D36BC7DDDCD3E1886D5C614 /* Pods_CloudViewer.framework */; };
+		EF30BEDF214822C000D4DF45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30BEDE214822C000D4DF45 /* ViewController.swift */; };
+		EF30BEE12148355000D4DF45 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30BEE02148355000D4DF45 /* ViewModel.swift */; };
+		EF30BEE32148368000D4DF45 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF30BEE22148368000D4DF45 /* CloudKit.framework */; };
+		EF30BEE52148369300D4DF45 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF30BEE42148369300D4DF45 /* CoreData.framework */; };
 		EF96A9A92147258F00E00608 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96A9A82147258F00E00608 /* AppDelegate.swift */; };
 		EF96A9AB2147259000E00608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF96A9AA2147259000E00608 /* Assets.xcassets */; };
 		EF96A9AE2147259000E00608 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF96A9AC2147259000E00608 /* MainMenu.xib */; };
@@ -30,6 +34,10 @@
 		0D1D39960EEF069B93B8EB6D /* Pods-CloudViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudViewer.release.xcconfig"; path = "Target Support Files/Pods-CloudViewer/Pods-CloudViewer.release.xcconfig"; sourceTree = "<group>"; };
 		438BC372C61D2B536FF3DA30 /* Pods-CloudViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudViewer.debug.xcconfig"; path = "Target Support Files/Pods-CloudViewer/Pods-CloudViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		5D36BC7DDDCD3E1886D5C614 /* Pods_CloudViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloudViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF30BEDE214822C000D4DF45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF30BEE02148355000D4DF45 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		EF30BEE22148368000D4DF45 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		EF30BEE42148369300D4DF45 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EF96A9A52147258F00E00608 /* CloudViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF96A9A82147258F00E00608 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF96A9AA2147259000E00608 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF30BEE52148369300D4DF45 /* CoreData.framework in Frameworks */,
+				EF30BEE32148368000D4DF45 /* CloudKit.framework in Frameworks */,
 				36E4B125A0C5D9292D67BE59 /* Pods_CloudViewer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +106,8 @@
 				EF96A9AC2147259000E00608 /* MainMenu.xib */,
 				EF96A9AF2147259000E00608 /* Info.plist */,
 				EF96A9B02147259000E00608 /* CloudViewer.entitlements */,
+				EF30BEDE214822C000D4DF45 /* ViewController.swift */,
+				EF30BEE02148355000D4DF45 /* ViewModel.swift */,
 			);
 			path = CloudViewer;
 			sourceTree = "<group>";
@@ -103,6 +115,8 @@
 		EF96A9B6214725AE00E00608 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF30BEE42148369300D4DF45 /* CoreData.framework */,
+				EF30BEE22148368000D4DF45 /* CloudKit.framework */,
 				5D36BC7DDDCD3E1886D5C614 /* Pods_CloudViewer.framework */,
 			);
 			name = Frameworks;
@@ -268,6 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF30BEDF214822C000D4DF45 /* ViewController.swift in Sources */,
+				EF30BEE12148355000D4DF45 /* ViewModel.swift in Sources */,
 				EF96A9A92147258F00E00608 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
