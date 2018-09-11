@@ -12,6 +12,9 @@
 		EF30BEE12148355000D4DF45 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30BEE02148355000D4DF45 /* ViewModel.swift */; };
 		EF30BEE32148368000D4DF45 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF30BEE22148368000D4DF45 /* CloudKit.framework */; };
 		EF30BEE52148369300D4DF45 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF30BEE42148369300D4DF45 /* CoreData.framework */; };
+		EF30BEE82148687800D4DF45 /* Bundle+Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30BEE72148687800D4DF45 /* Bundle+Dictionary.swift */; };
+		EF30BEEA214868F600D4DF45 /* GoogleCredentialInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30BEE9214868F600D4DF45 /* GoogleCredentialInfoModel.swift */; };
+		EF30BEED21486D0800D4DF45 /* String+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF30BEEC21486D0800D4DF45 /* String+Decode.swift */; };
 		EF96A9A92147258F00E00608 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF96A9A82147258F00E00608 /* AppDelegate.swift */; };
 		EF96A9AB2147259000E00608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF96A9AA2147259000E00608 /* Assets.xcassets */; };
 		EF96A9AE2147259000E00608 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF96A9AC2147259000E00608 /* MainMenu.xib */; };
@@ -38,6 +41,9 @@
 		EF30BEE02148355000D4DF45 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		EF30BEE22148368000D4DF45 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		EF30BEE42148369300D4DF45 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EF30BEE72148687800D4DF45 /* Bundle+Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Dictionary.swift"; sourceTree = "<group>"; };
+		EF30BEE9214868F600D4DF45 /* GoogleCredentialInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCredentialInfoModel.swift; sourceTree = "<group>"; };
+		EF30BEEC21486D0800D4DF45 /* String+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Decode.swift"; sourceTree = "<group>"; };
 		EF96A9A52147258F00E00608 /* CloudViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF96A9A82147258F00E00608 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF96A9AA2147259000E00608 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +84,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EF30BEE62148685D00D4DF45 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EF30BEE72148687800D4DF45 /* Bundle+Dictionary.swift */,
+				EF30BEEC21486D0800D4DF45 /* String+Decode.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EF30BEEB2148691A00D4DF45 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF30BEE9214868F600D4DF45 /* GoogleCredentialInfoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		EF96A99C2147258F00E00608 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +124,8 @@
 		EF96A9A72147258F00E00608 /* CloudViewer */ = {
 			isa = PBXGroup;
 			children = (
+				EF30BEEB2148691A00D4DF45 /* Models */,
+				EF30BEE62148685D00D4DF45 /* Extension */,
 				EF96A9A82147258F00E00608 /* AppDelegate.swift */,
 				EF96A9AA2147259000E00608 /* Assets.xcassets */,
 				EF96A9AC2147259000E00608 /* MainMenu.xib */,
@@ -236,7 +261,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CloudViewer/Pods-CloudViewer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
@@ -244,7 +274,12 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
@@ -282,7 +317,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF30BEEA214868F600D4DF45 /* GoogleCredentialInfoModel.swift in Sources */,
 				EF30BEDF214822C000D4DF45 /* ViewController.swift in Sources */,
+				EF30BEED21486D0800D4DF45 /* String+Decode.swift in Sources */,
+				EF30BEE82148687800D4DF45 /* Bundle+Dictionary.swift in Sources */,
 				EF30BEE12148355000D4DF45 /* ViewModel.swift in Sources */,
 				EF96A9A92147258F00E00608 /* AppDelegate.swift in Sources */,
 			);

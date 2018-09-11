@@ -683,8 +683,7 @@
         </menu>
         <window title="CloudViewer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="745" height="497"/>
+            <rect key="contentRect" x="463" y="223" width="745" height="497"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="745" height="497"/>
@@ -745,6 +744,7 @@
         <userDefaultsController representsSharedInstance="YES" id="YA3-n3-PH0"/>
         <viewController id="dDV-ga-Nwt" customClass="MainViewController" customModule="CloudViewer" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="dnz-iZ-xlT" id="n1K-Sv-kor"/>
                 <outlet property="view" destination="dU9-hS-kPh" id="dCd-Hl-SR1"/>
             </connections>
         </viewController>
