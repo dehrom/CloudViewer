@@ -1,6 +1,6 @@
+import CloudKit
 import Foundation
 import RxSwift
-import CloudKit
 
 class ViewModel {
     func fetch() -> Observable<Void> {
